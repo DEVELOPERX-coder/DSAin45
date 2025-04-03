@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a237e" />
+      <stop offset="100%" stop-color="#311b92" />
+    </linearGradient>
+    
+    <!-- Block Gradients -->
+    <linearGradient id="c-style-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#42a5f5" />
+      <stop offset="100%" stop-color="#1e88e5" />
+    </linearGradient>
+    
+    <linearGradient id="cpp-small-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#66bb6a" />
+      <stop offset="100%" stop-color="#43a047" />
+    </linearGradient>
+    
+    <linearGradient id="cpp-large-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffb74d" />
+      <stop offset="100%" stop-color="#ff9800" />
+    </linearGradient>
+    
+    <linearGradient id="metadata-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ba68c8" />
+      <stop offset="100%" stop-color="#9c27b0" />
+    </linearGradient>
+    
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feFlood flood-color="#ffffff" flood-opacity="0.3" result="glow" />
+      <feComposite in="glow" in2="blur" operator="in" result="coloredBlur" />
+      <feComposite in="SourceGraphic" in2="coloredBlur" operator="over" />
+    </filter>
+    
+    <!-- Arrow marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+      markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#bbdefb"/>
+    </marker>
+  </defs>
+  
+  <!-- Background Rectangle -->
+  <rect width="900" height="550" fill="url(#bg-gradient)" />
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle" fill="white" filter="url(#glow)">String Memory Layout Comparison</text>
+  
+  <!-- C-style String Section -->
+  <g>
+    <text x="450" y="90" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="white">C-style Strings vs std::string</text>
+    
+    <!-- C-style String Title -->
+    <text x="220" y="130" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="white">C-style String</text>
+    <text x="220" y="155" font-family="Arial" font-size="16" text-anchor="middle" fill="#bbdefb">char greeting[] = "Hello";</text>
+    
+    <!-- C-style Memory Blocks -->
+    <g>
+      <rect x="120" y="180" width="50" height="50" rx="5" fill="url(#c-style-gradient)" stroke="white" stroke-width="1" />
+      <text x="145" y="210" font-family="Consolas, monospace" font-size="20" font-weight="bold" text-anchor="middle" fill="white">H</text>
+      <text x="145" y="240" font-family="Arial" font-size="12" text-anchor="middle" fill="#bbdefb">[0]</text>
+      
+      <rect x="170" y="180" width="50" height="50" rx="5" fill="url(#c-style-gradient)" stroke="white" stroke-width="1" />
+      <text x="195" y="210" font-family="Consolas, monospace" font-size="20" font-weight="bold" text-anchor="middle" fill="white">e</text>
+      <text x="195" y="240" font-family="Arial" font-size="12" text-anchor="middle" fill="#bbdefb">[1]</text>
+      
+      <rect x="220" y="180" width="50" height="50" rx="5" fill="url(#c-style-gradient)" stroke="white" stroke-width="1" />
+      <text x="245" y="210" font-family="Consolas, monospace" font-size="20" font-weight="bold" text-anchor="middle" fill="white">l</text>
+      <text x="245" y="240" font-family="Arial" font-size="12" text-anchor="middle" fill="#bbdefb">[2]</text>
+      
+      <rect x="270" y="180" width="50" height="50" rx="5" fill="url(#c-style-gradient)" stroke="white" stroke-width="1" />
+      <text x="295" y="210" font-family="Consolas, monospace" font-size="20" font-weight="bold" text-anchor="middle" fill="white">l</text>
+      <text x="295" y="240" font-family="Arial" font-size="12" text-anchor="middle" fill="#bbdefb">[3]</text>
+      
+      <rect x="320" y="180" width="50" height="50" rx="5" fill="url(#c-style-gradient)" stroke="white" stroke-width="1" />
+      <text x="345" y="210" font-family="Consolas, monospace" font-size="20" font-weight="bold" text-anchor="middle" fill="white">o</text>
+      <text x="345" y="240" font-family="Arial" font-size="12" text-anchor="middle" fill="#bbdefb">[4]</text>
+      
+      <rect x="370" y="180" width="50" height="50" rx="5" fill="url(#c-style-gradient)" stroke="white" stroke-width="1" />
+      <text x="395" y="210" font-family="Consolas, monospace" font-size="20" font-weight="bold" text-anchor="middle" fill="white">\0</text>
+      <text x="395" y="240" font-family="Arial" font-size="12" text-anchor="middle" fill="#bbdefb">[5]</text>
+    </g>
+    
+    <!-- C-style String Notes -->
+    <g>
+      <rect x="120" y="270" width="300" height="80" rx="10" fill="#00000060" />
+      <text x="130" y="290" font-family="Arial" font-size="14" fill="white">• Fixed size allocated at declaration</text>
+      <text x="130" y="315" font-family="Arial" font-size="14" fill="white">• Must manage memory manually</text>
+      <text x="130" y="340" font-family="Arial" font-size="14" fill="white">• Relies on null terminator ('\0')</text>
+    </g>
+  </g>
+  
+  <!-- std::string Small String Section -->
+  <g>
+    <!-- Small String Title -->
+    <text x="220" y="390" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="white">std::string (Small String)</text>
+    <text x="220" y="415" font-family="Arial" font-size="16" text-anchor="middle" fill="#bbdefb">std::string greeting = "Hello";</text>
+    
+    <!-- Small String Object Visualization -->
+    <rect x="120" y="435" width="300" height="100" rx="10" fill="#00000060" stroke="#43a047" stroke-width="2" />
+    
+    <!-- String object internal data -->
+    <rect x="135" y="445" width="130" height="30" rx="5" fill="url(#metadata-gradient)" stroke="white" stroke-width="1" />
+    <text x="200" y="465" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">size = 5</text>
+    
+    <rect x="275" y="445" width="130" height="30" rx="5" fill="url(#metadata-gradient)" stroke="white" stroke-width="1" />
+    <text x="340" y="465" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">capacity = 15</text>
+    
+    <!-- Small String Buffer -->
+    <rect x="135" y="485" width="270" height="40" rx="5" fill="url(#cpp-small-gradient)" stroke="white" stroke-width="1" />
+    <text x="270" y="510" font-family="Consolas, monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="white">H e l l o \0 - - - - - - - - -</text>
+    <text x="270" y="530" font-family="Arial" font-size="12" text-anchor="middle" fill="#a5d6a7">Small String Optimization (SSO) Buffer</text>
+  </g>
+  
+  <!-- std::string Large String Section -->
+  <g>
+    <!-- Large String Title -->
+    <text x="680" y="130" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="white">std::string (Large String)</text>
+    <text x="680" y="155" font-family="Arial" font-size="16" text-anchor="middle" fill="#bbdefb">std::string longText = "This is a longer string that won't fit in SSO buffer";</text>
+    
+    <!-- String Object Visualization -->
+    <rect x="580" y="180" width="200" height="150" rx="10" fill="#00000060" stroke="#ff9800" stroke-width="2" />
+    
+    <!-- String object internal data -->
+    <rect x="595" y="190" width="170" height="30" rx="5" fill="url(#metadata-gradient)" stroke="white" stroke-width="1" />
+    <text x="680" y="210" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">size = 53</text>
+    
+    <rect x="595" y="230" width="170" height="30" rx="5" fill="url(#metadata-gradient)" stroke="white" stroke-width="1" />
+    <text x="680" y="250" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">capacity = 80</text>
+    
+    <!-- Pointer to heap -->
+    <rect x="595" y="270" width="170" height="40" rx="5" fill="#00000080" stroke="white" stroke-width="1" stroke-dasharray="5,3" />
+    <text x="680" y="295" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffcc80">Pointer to heap memory</text>
+    
+    <!-- Heap allocation -->
+    <rect x="480" y="370" width="400" height="60" rx="5" fill="url(#cpp-large-gradient)" stroke="white" stroke-width="1" />
+    <text x="680" y="405" font-family="Consolas, monospace" font-size="14" font-weight="bold" text-anchor="middle" fill="white">This is a longer string that won't fit in SSO buffer\0...</text>
+    <text x="680" y="445" font-family="Arial" font-size="14" text-anchor="middle" fill="#ffe0b2">Dynamically allocated heap memory</text>
+    
+    <!-- Connecting arrow -->
+    <path d="M 680 310 L 680 370" stroke="#ffcc80" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)" />
+  </g>
+  
+  <!-- std::string Notes -->
+  <g>
+    <rect x="580" y="470" width="300" height="65" rx="10" fill="#00000060" />
+    <text x="590" y="490" font-family="Arial" font-size="14" fill="white">• Small String Optimization (SSO)</text>
+    <text x="590" y="515" font-family="Arial" font-size="14" fill="white">• Tracks size and capacity</text>
+    <text x="590" y="540" font-family="Arial" font-size="14" fill="white">• Manages memory automatically</text>
+  </g>
+</svg>

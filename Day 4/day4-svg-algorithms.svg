@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a237e" />
+      <stop offset="100%" stop-color="#311b92" />
+    </linearGradient>
+    
+    <!-- Block Gradients -->
+    <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#42a5f5" />
+      <stop offset="100%" stop-color="#1e88e5" />
+    </linearGradient>
+    
+    <linearGradient id="pattern-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffb74d" />
+      <stop offset="100%" stop-color="#ff9800" />
+    </linearGradient>
+    
+    <linearGradient id="match-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#66bb6a" />
+      <stop offset="100%" stop-color="#43a047" />
+    </linearGradient>
+    
+    <linearGradient id="mismatch-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef5350" />
+      <stop offset="100%" stop-color="#e53935" />
+    </linearGradient>
+    
+    <linearGradient id="table-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ba68c8" />
+      <stop offset="100%" stop-color="#9c27b0" />
+    </linearGradient>
+    
+    <linearGradient id="hash-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4db6ac" />
+      <stop offset="100%" stop-color="#009688" />
+    </linearGradient>
+    
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feFlood flood-color="#ffffff" flood-opacity="0.3" result="glow" />
+      <feComposite in="glow" in2="blur" operator="in" result="coloredBlur" />
+      <feComposite in="SourceGraphic" in2="coloredBlur" operator="over" />
+    </filter>
+    
+    <!-- Arrow marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+      markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#bbdefb"/>
+    </marker>
+  </defs>
+  
+  <!-- Background Rectangle -->
+  <rect width="900" height="650" fill="url(#bg-gradient)" />
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle" fill="white" filter="url(#glow)">String Pattern Matching Algorithms</text>
+  
+  <!-- Naive Approach Section -->
+  <g>
+    <text x="450" y="80" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="white">1. Naive Algorithm (Brute Force)</text>
+    <text x="450" y="105" font-family="Arial" font-size="16" text-anchor="middle" fill="#bbdefb">Time Complexity: O(n*m) where n = text length, m = pattern length</text>
+    
+    <!-- Text to search in -->
+    <text x="100" y="135" font-family="Arial" font-size="16" font-weight="bold" fill="white">Text:</text>
+    
+    <g>
+      <!-- Text Characters -->
+      <rect x="150" y="120" width="40" height="40" rx="5" fill="url(#text-gradient)" stroke="white" stroke-width="1" />
+      <text x="170" y="145" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      <text x="170" y="170" font-family="Arial" font-size="10" text-anchor="middle" fill="#bbdefb">[0]</text>
+      
+      <rect x="190" y="120" width="40" height="40" rx="5" fill="url(#text-gradient)" stroke="white" stroke-width="1" />
+      <text x="210" y="145" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">B</text>
+      <text x="210" y="170" font-family="Arial" font-size="10" text-anchor="middle" fill="#bbdefb">[1]</text>
+      
+      <rect x="230" y="120" width="40" height="40" rx="5" fill="url(#text-gradient)" stroke="white" stroke-width="1" />
+      <text x="250" y="145" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">C</text>
+      <text x="250" y="170" font-family="Arial" font-size="10" text-anchor="middle" fill="#bbdefb">[2]</text>
+      
+      <rect x="270" y="120" width="40" height="40" rx="5" fill="url(#match-gradient)" stroke="white" stroke-width="1" />
+      <text x="290" y="145" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      <text x="290" y="170" font-family="Arial" font-size="10" text-anchor="middle" fill="#bbdefb">[3]</text>
+      
+      <rect x="310" y="120" width="40" height="40" rx="5" fill="url(#match-gradient)" stroke="white" stroke-width="1" />
+      <text x="330" y="145" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">B</text>
+      <text x="330" y="170" font-family="Arial" font-size="10" text-anchor="middle" fill="#bbdefb">[4]</text>
+      
+      <rect x="350" y="120" width="40" height="40" rx="5" fill="url(#match-gradient)" stroke="white" stroke-width="1" />
+      <text x="370" y="145" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      <text x="370" y="170" font-family="Arial" font-size="10" text-anchor="middle" fill="#bbdefb">[5]</text>
+      
+      <rect x="390" y="120" width="40" height="40" rx="5" fill="url(#text-gradient)" stroke="white" stroke-width="1" />
+      <text x="410" y="145" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">C</text>
+      <text x="410" y="170" font-family="Arial" font-size="10" text-anchor="middle" fill="#bbdefb">[6]</text>
+      
+      <rect x="430" y="120" width="40" height="40" rx="5" fill="url(#text-gradient)" stroke="white" stroke-width="1" />
+      <text x="450" y="145" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      <text x="450" y="170" font-family="Arial" font-size="10" text-anchor="middle" fill="#bbdefb">[7]</text>
+      
+      <rect x="470" y="120" width="40" height="40" rx="5" fill="url(#text-gradient)" stroke="white" stroke-width="1" />
+      <text x="490" y="145" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">B</text>
+      <text x="490" y="170" font-family="Arial" font-size="10" text-anchor="middle" fill="#bbdefb">[8]</text>
+    </g>
+    
+    <!-- Pattern to find -->
+    <text x="100" y="215" font-family="Arial" font-size="16" font-weight="bold" fill="white">Pattern:</text>
+    
+    <g>
+      <rect x="270" y="200" width="40" height="40" rx="5" fill="url(#pattern-gradient)" stroke="white" stroke-width="1" />
+      <text x="290" y="225" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      <text x="290" y="250" font-family="Arial" font-size="10" text-anchor="middle" fill="#ffe0b2">[0]</text>
+      
+      <rect x="310" y="200" width="40" height="40" rx="5" fill="url(#pattern-gradient)" stroke="white" stroke-width="1" />
+      <text x="330" y="225" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">B</text>
+      <text x="330" y="250" font-family="Arial" font-size="10" text-anchor="middle" fill="#ffe0b2">[1]</text>
+      
+      <rect x="350" y="200" width="40" height="40" rx="5" fill="url(#pattern-gradient)" stroke="white" stroke-width="1" />
+      <text x="370" y="225" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      <text x="370" y="250" font-family="Arial" font-size="10" text-anchor="middle" fill="#ffe0b2">[2]</text>
+    </g>
+    
+    <!-- Brute force explanation -->
+    <rect x="600" y="120" width="270" height="120" rx="10" fill="#00000060" />
+    <text x="615" y="140" font-family="Arial" font-size="16" font-weight="bold" fill="white">Naive Algorithm:</text>
+    <text x="615" y="165" font-family="Arial" font-size="14" fill="#bbdefb">1. Check pattern at every position</text>
+    <text x="615" y="190" font-family="Arial" font-size="14" fill="#bbdefb">2. Compare each character</text>
+    <text x="615" y="215" font-family="Arial" font-size="14" fill="#bbdefb">3. If mismatch, slide one position</text>
+    <text x="615" y="240" font-family="Arial" font-size="14" fill="#bbdefb">4. Repeat until match or text ends</text>
+  </g>
+  
+  <!-- KMP Algorithm Section -->
+  <g>
+    <text x="450" y="290" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="white">2. Knuth-Morris-Pratt (KMP) Algorithm</text>
+    <text x="450" y="315" font-family="Arial" font-size="16" text-anchor="middle" fill="#bbdefb">Time Complexity: O(n+m) - Uses pattern preprocessing to avoid redundant comparisons</text>
+    
+    <!-- KMP partial match table -->
+    <text x="200" y="345" font-family="Arial" font-size="16" font-weight="bold" fill="white">LPS Table (Longest Prefix Suffix):</text>
+    
+    <g>
+      <!-- Pattern for LPS -->
+      <rect x="150" y="365" width="40" height="40" rx="5" fill="url(#pattern-gradient)" stroke="white" stroke-width="1" />
+      <text x="170" y="390" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      <text x="170" y="415" font-family="Arial" font-size="10" text-anchor="middle" fill="#ffe0b2">[0]</text>
+      
+      <rect x="190" y="365" width="40" height="40" rx="5" fill="url(#pattern-gradient)" stroke="white" stroke-width="1" />
+      <text x="210" y="390" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">B</text>
+      <text x="210" y="415" font-family="Arial" font-size="10" text-anchor="middle" fill="#ffe0b2">[1]</text>
+      
+      <rect x="230" y="365" width="40" height="40" rx="5" fill="url(#pattern-gradient)" stroke="white" stroke-width="1" />
+      <text x="250" y="390" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      <text x="250" y="415" font-family="Arial" font-size="10" text-anchor="middle" fill="#ffe0b2">[2]</text>
+      
+      <!-- LPS values -->
+      <rect x="150" y="425" width="40" height="40" rx="5" fill="url(#table-gradient)" stroke="white" stroke-width="1" />
+      <text x="170" y="450" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">0</text>
+      
+      <rect x="190" y="425" width="40" height="40" rx="5" fill="url(#table-gradient)" stroke="white" stroke-width="1" />
+      <text x="210" y="450" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">0</text>
+      
+      <rect x="230" y="425" width="40" height="40" rx="5" fill="url(#table-gradient)" stroke="white" stroke-width="1" />
+      <text x="250" y="450" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">1</text>
+    </g>
+    
+    <!-- KMP algorithm visualization -->
+    <g>
+      <!-- Text in KMP -->
+      <rect x="350" y="365" width="40" height="40" rx="5" fill="url(#text-gradient)" stroke="white" stroke-width="1" />
+      <text x="370" y="390" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      
+      <rect x="390" y="365" width="40" height="40" rx="5" fill="url(#text-gradient)" stroke="white" stroke-width="1" />
+      <text x="410" y="390" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">B</text>
+      
+      <rect x="430" y="365" width="40" height="40" rx="5" fill="url(#text-gradient)" stroke="white" stroke-width="1" />
+      <text x="450" y="390" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">C</text>
+      
+      <rect x="470" y="365" width="40" height="40" rx="5" fill="url(#match-gradient)" stroke="white" stroke-width="1" />
+      <text x="490" y="390" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      
+      <rect x="510" y="365" width="40" height="40" rx="5" fill="url(#match-gradient)" stroke="white" stroke-width="1" />
+      <text x="530" y="390" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">B</text>
+      
+      <rect x="550" y="365" width="40" height="40" rx="5" fill="url(#match-gradient)" stroke="white" stroke-width="1" />
+      <text x="570" y="390" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      
+      <!-- Pattern attempt with KMP -->
+      <rect x="470" y="425" width="40" height="40" rx="5" fill="url(#pattern-gradient)" stroke="white" stroke-width="1" />
+      <text x="490" y="450" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      
+      <rect x="510" y="425" width="40" height="40" rx="5" fill="url(#pattern-gradient)" stroke="white" stroke-width="1" />
+      <text x="530" y="450" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">B</text>
+      
+      <rect x="550" y="425" width="40" height="40" rx="5" fill="url(#pattern-gradient)" stroke="white" stroke-width="1" />
+      <text x="570" y="450" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+    </g>
+    
+    <!-- KMP explanation -->
+    <rect x="600" y="365" width="270" height="110" rx="10" fill="#00000060" />
+    <text x="615" y="385" font-family="Arial" font-size="16" font-weight="bold" fill="white">KMP Advantage:</text>
+    <text x="615" y="410" font-family="Arial" font-size="14" fill="#bbdefb">• Precomputes pattern information</text>
+    <text x="615" y="435" font-family="Arial" font-size="14" fill="#bbdefb">• Skips characters intelligently</text>
+    <text x="615" y="460" font-family="Arial" font-size="14" fill="#bbdefb">• No backtracking in the text</text>
+  </g>
+  
+  <!-- Rabin-Karp Algorithm Section -->
+  <g>
+    <text x="450" y="500" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="white">3. Rabin-Karp Algorithm</text>
+    <text x="450" y="525" font-family="Arial" font-size="16" text-anchor="middle" fill="#bbdefb">Time Complexity: Average O(n+m), Worst O(n*m) - Uses rolling hash for efficient filtering</text>
+    
+    <!-- Rabin-Karp Hashing -->
+    <g>
+      <text x="175" y="555" font-family="Arial" font-size="16" font-weight="bold" fill="white">Text Window:</text>
+      
+      <rect x="150" y="565" width="40" height="40" rx="5" fill="url(#text-gradient)" stroke="white" stroke-width="1" />
+      <text x="170" y="590" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      
+      <rect x="190" y="565" width="40" height="40" rx="5" fill="url(#text-gradient)" stroke="white" stroke-width="1" />
+      <text x="210" y="590" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">B</text>
+      
+      <rect x="230" y="565" width="40" height="40" rx="5" fill="url(#text-gradient)" stroke="white" stroke-width="1" />
+      <text x="250" y="590" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      
+      <rect x="150" y="615" width="120" height="40" rx="5" fill="url(#hash-gradient)" stroke="white" stroke-width="1" />
+      <text x="210" y="640" font-family="Consolas, monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Hash: 28731</text>
+    </g>
+    
+    <g>
+      <text x="430" y="555" font-family="Arial" font-size="16" font-weight="bold" fill="white">Pattern:</text>
+      
+      <rect x="350" y="565" width="40" height="40" rx="5" fill="url(#pattern-gradient)" stroke="white" stroke-width="1" />
+      <text x="370" y="590" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      
+      <rect x="390" y="565" width="40" height="40" rx="5" fill="url(#pattern-gradient)" stroke="white" stroke-width="1" />
+      <text x="410" y="590" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">B</text>
+      
+      <rect x="430" y="565" width="40" height="40" rx="5" fill="url(#pattern-gradient)" stroke="white" stroke-width="1" />
+      <text x="450" y="590" font-family="Consolas, monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="white">A</text>
+      
+      <rect x="350" y="615" width="120" height="40" rx="5" fill="url(#hash-gradient)" stroke="white" stroke-width="1" />
+      <text x="410" y="640" font-family="Consolas, monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Hash: 28731</text>
+    </g>
+    
+    <!-- Hashes Match! -->
+    <path d="M 280 630 L 340 630" stroke="#4db6ac" stroke-width="2" marker-end="url(#arrow)" />
+    <text x="310" y="620" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#4db6ac">Match!</text>
+    
+    <!-- Rabin-Karp explanation -->
+    <rect x="600" y="565" width="270" height="110" rx="10" fill="#00000060" />
+    <text x="615" y="585" font-family="Arial" font-size="16" font-weight="bold" fill="white">Rabin-Karp Approach:</text>
+    <text x="615" y="610" font-family="Arial" font-size="14" fill="#bbdefb">• Calculate hash of pattern</text>
+    <text x="615" y="635" font-family="Arial" font-size="14" fill="#bbdefb">• Use rolling hash on text windows</text>
+    <text x="615" y="660" font-family="Arial" font-size="14" fill="#bbdefb">• Compare characters only when hashes match</text>
+  </g>
+</svg>
