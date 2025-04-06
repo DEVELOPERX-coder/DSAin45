@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="700" fill="#1e1e2e" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="45" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" font-weight="bold" fill="#f8f9fa">
+    Linked List Types: Time &amp; Space Complexity
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="75" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#a9b1d6">
+    Comprehensive comparison of singly, doubly, and circular linked lists #DSAin45
+  </text>
+  
+  <!-- Table Header Background -->
+  <rect x="50" y="100" width="700" height="50" rx="5" ry="5" fill="#7c3aed"/>
+  
+  <!-- Table Headers -->
+  <text x="160" y="132" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff" font-weight="bold">Operation</text>
+  <text x="300" y="132" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff" font-weight="bold">Singly Linked</text>
+  <text x="440" y="132" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff" font-weight="bold">Doubly Linked</text>
+  <text x="580" y="132" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff" font-weight="bold">Circular Singly</text>
+  <text x="700" y="132" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff" font-weight="bold">Circular Doubly</text>
+  
+  <!-- Table Rows (alternating colors) -->
+  <!-- Row 1 -->
+  <rect x="50" y="150" width="700" height="40" fill="#2d2d3f"/>
+  <text x="160" y="175" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">Memory per Node</text>
+  <text x="300" y="175" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">data + 1 ptr</text>
+  <text x="440" y="175" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">data + 2 ptrs</text>
+  <text x="580" y="175" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">data + 1 ptr</text>
+  <text x="700" y="175" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">data + 2 ptrs</text>
+  
+  <!-- Row 2 -->
+  <rect x="50" y="190" width="700" height="40" fill="#252536"/>
+  <text x="160" y="215" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">Access by Index</text>
+  <text x="300" y="215" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="440" y="215" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="580" y="215" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="700" y="215" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  
+  <!-- Row 3 -->
+  <rect x="50" y="230" width="700" height="40" fill="#2d2d3f"/>
+  <text x="160" y="255" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">Insert at Beginning</text>
+  <text x="300" y="255" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#22c55e">O(1)</text>
+  <text x="440" y="255" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#22c55e">O(1)</text>
+  <text x="580" y="255" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)*</text>
+  <text x="700" y="255" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#22c55e">O(1)</text>
+  
+  <!-- Row 4 -->
+  <rect x="50" y="270" width="700" height="40" fill="#252536"/>
+  <text x="160" y="295" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">Insert at End (with tail)</text>
+  <text x="300" y="295" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#22c55e">O(1)</text>
+  <text x="440" y="295" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#22c55e">O(1)</text>
+  <text x="580" y="295" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#22c55e">O(1)</text>
+  <text x="700" y="295" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#22c55e">O(1)</text>
+  
+  <!-- Row 5 -->
+  <rect x="50" y="310" width="700" height="40" fill="#2d2d3f"/>
+  <text x="160" y="335" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">Insert at End (no tail)</text>
+  <text x="300" y="335" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="440" y="335" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="580" y="335" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="700" y="335" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  
+  <!-- Row 6 -->
+  <rect x="50" y="350" width="700" height="40" fill="#252536"/>
+  <text x="160" y="375" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">Insert at Position</text>
+  <text x="300" y="375" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="440" y="375" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="580" y="375" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="700" y="375" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  
+  <!-- Row 7 -->
+  <rect x="50" y="390" width="700" height="40" fill="#2d2d3f"/>
+  <text x="160" y="415" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">Delete from Beginning</text>
+  <text x="300" y="415" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#22c55e">O(1)</text>
+  <text x="440" y="415" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#22c55e">O(1)</text>
+  <text x="580" y="415" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)**</text>
+  <text x="700" y="415" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#22c55e">O(1)</text>
+  
+  <!-- Row 8 -->
+  <rect x="50" y="430" width="700" height="40" fill="#252536"/>
+  <text x="160" y="455" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">Delete from End</text>
+  <text x="300" y="455" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="440" y="455" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#22c55e">O(1)</text>
+  <text x="580" y="455" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="700" y="455" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#22c55e">O(1)</text>
+  
+  <!-- Row 9 -->
+  <rect x="50" y="470" width="700" height="40" fill="#2d2d3f"/>
+  <text x="160" y="495" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">Backward Traversal</text>
+  <text x="300" y="495" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="440" y="495" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#22c55e">O(1)</text>
+  <text x="580" y="495" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="700" y="495" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#22c55e">O(1)</text>
+  
+  <!-- Row 10 -->
+  <rect x="50" y="510" width="700" height="40" fill="#252536"/>
+  <text x="160" y="535" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">Search</text>
+  <text x="300" y="535" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="440" y="535" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="580" y="535" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  <text x="700" y="535" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f97316">O(n)</text>
+  
+  <!-- Row 11 -->
+  <rect x="50" y="550" width="700" height="40" fill="#2d2d3f"/>
+  <text x="160" y="575" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">Space Complexity</text>
+  <text x="300" y="575" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fbbf24">O(n)</text>
+  <text x="440" y="575" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fbbf24">O(n)</text>
+  <text x="580" y="575" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fbbf24">O(n)</text>
+  <text x="700" y="575" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fbbf24">O(n)</text>
+  
+  <!-- Notes -->
+  <text x="70" y="610" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#a9b1d6" font-style="italic">
+    * O(n) for circular singly list insertion at beginning because we need to find the last node to update its pointer
+  </text>
+  <text x="70" y="630" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#a9b1d6" font-style="italic">
+    ** O(n) for circular singly list deletion from beginning because we need to find the last node to update its pointer
+  </text>
+  <text x="70" y="650" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#a9b1d6" font-style="italic">
+    n = number of nodes in the linked list
+  </text>
+  
+  <!-- Color Legend -->
+  <rect x="580" y="610" width="20" height="20" fill="#22c55e"/>
+  <text x="605" y="625" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#e0e0fa">O(1) - Constant Time (Best)</text>
+  
+  <rect x="580" y="635" width="20" height="20" fill="#f97316"/>
+  <text x="605" y="650" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#e0e0fa">O(n) - Linear Time</text>
+  
+  <rect x="580" y="660" width="20" height="20" fill="#fbbf24"/>
+  <text x="605" y="675" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#e0e0fa">O(n) - Linear Space</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="50" cy="50" r="20" fill="#7c3aed" opacity="0.3"/>
+  <circle cx="750" cy="50" r="20" fill="#7c3aed" opacity="0.3"/>
+  <circle cx="50" cy="650" r="20" fill="#22c55e" opacity="0.3"/>
+  <circle cx="750" cy="650" r="20" fill="#22c55e" opacity="0.3"/>
+  
+  <!-- Fun Fact Box -->
+  <rect x="50" y="670" width="500" height="25" rx="5" ry="5" fill="#fbbf24" opacity="0.5"/>
+  <text x="55" y="687" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#1e1e2e" font-weight="bold">
+    Fun Fact: 
+  </text>
+  <text x="115" y="687" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#1e1e2e">
+    XOR linked lists combine both next & prev into a single pointer using bitwise XOR!
+  </text>
+  
+  <!-- Joke -->
+  <rect x="60" y="620" width="500" height="40" rx="5" ry="5" fill="#7c3aed" opacity="0.2"/>
+  <text x="310" y="645" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-style="italic" fill="#e0e0fa">
+    "A circular linked list walks into a bar... and into a bar... and into a bar..."
+  </text>
+</svg>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#333">
+    Circular Linked List: Where End Meets Beginning
+  </text>
+  
+  <!-- Circular Linked List Visualization -->
+  <!-- Head Pointer -->
+  <text x="400" y="110" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ea4335">head</text>
+  <path d="M400,115 L400,130 L400,140" fill="none" stroke="#ea4335" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Circular Layout - Main Container -->
+  <circle cx="400" cy="210" r="120" fill="none" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- Node 1 (at top) -->
+  <rect x="355" y="150" width="90" height="40" rx="5" ry="5" fill="#4285f4" stroke="#2965c0" stroke-width="2"/>
+  <text x="400" y="175" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ffffff">data: 10</text>
+  
+  <!-- Node 2 (at right) -->
+  <rect x="500" y="190" width="90" height="40" rx="5" ry="5" fill="#4285f4" stroke="#2965c0" stroke-width="2"/>
+  <text x="545" y="215" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ffffff">data: 20</text>
+  
+  <!-- Node 3 (at bottom) -->
+  <rect x="355" y="230" width="90" height="40" rx="5" ry="5" fill="#4285f4" stroke="#2965c0" stroke-width="2"/>
+  <text x="400" y="255" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ffffff">data: 30</text>
+  
+  <!-- Node 4 (at left) -->
+  <rect x="210" y="190" width="90" height="40" rx="5" ry="5" fill="#4285f4" stroke="#2965c0" stroke-width="2"/>
+  <text x="255" y="215" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ffffff">data: 40</text>
+  
+  <!-- Arrows connecting nodes -->
+  <path d="M445,150 Q490,150 510,190" fill="none" stroke="#34a853" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M500,230 Q465,270 445,230" fill="none" stroke="#34a853" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M355,230 Q320,270 285,230" fill="none" stroke="#34a853" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M210,190 Q230,150 355,150" fill="none" stroke="#34a853" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Operations Section -->
+  <text x="400" y="310" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#333">
+    Key Characteristics
+  </text>
+  
+  <!-- No Tail -->
+  <rect x="100" y="340" width="180" height="45" rx="5" ry="5" fill="#4285f4" opacity="0.8"/>
+  <text x="190" y="368" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff">No End (nullptr)</text>
+  <text x="190" y="390" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">Last node points to head</text>
+  
+  <!-- Endless Traversal -->
+  <rect x="310" y="340" width="180" height="45" rx="5" ry="5" fill="#4285f4" opacity="0.8"/>
+  <text x="400" y="368" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff">Endless Traversal</text>
+  <text x="400" y="390" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">Need exit condition!</text>
+  
+  <!-- Applications -->
+  <rect x="520" y="340" width="180" height="45" rx="5" ry="5" fill="#4285f4" opacity="0.8"/>
+  <text x="610" y="368" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff">Applications</text>
+  <text x="610" y="390" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">Round-robin scheduling</text>
+  
+  <!-- Fun Joke -->
+  <rect x="160" y="80" width="180" height="50" rx="10" ry="10" fill="#fbbc05" opacity="0.7"/>
+  <text x="250" y="105" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333" font-style="italic">
+    "A circular linked list walks into a bar...
+  </text>
+  <text x="250" y="125" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333" font-style="italic">
+    and into a bar... and into a bar..."
+  </text>
+  
+  <!-- Josephus Problem -->
+  <rect x="580" y="80" width="180" height="70" rx="10" ry="10" fill="#34a853" opacity="0.7"/>
+  <text x="670" y="100" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333" font-weight="bold">
+    Josephus Problem
+  </text>
+  <text x="670" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">
+    n people stand in a circle
+  </text>
+  <text x="670" y="140" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">
+    Every kth person is eliminated
+  </text>
+  
+  <!-- Arrow Definitions -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000"/>
+    </marker>
+  </defs>
+</svg>
