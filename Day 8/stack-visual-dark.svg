@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1e1e2e" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="45" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" font-weight="bold" fill="#e0e0fa">
+    Stack: Last-In-First-Out (LIFO) Data Structure
+  </text>
+  
+  <!-- Stack Visualization (Left Side) -->
+  <rect x="120" y="100" width="220" height="300" fill="#252536" stroke="#393953" stroke-width="2" rx="5" ry="5"/>
+  
+  <!-- Stack Elements -->
+  <rect x="130" y="350" width="200" height="40" fill="#7c3aed" stroke="#6025c0" stroke-width="2" rx="5" ry="5"/>
+  <text x="230" y="375" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff">Element 1 (Bottom)</text>
+  
+  <rect x="130" y="300" width="200" height="40" fill="#7c3aed" stroke="#6025c0" stroke-width="2" rx="5" ry="5"/>
+  <text x="230" y="325" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff">Element 2</text>
+  
+  <rect x="130" y="250" width="200" height="40" fill="#7c3aed" stroke="#6025c0" stroke-width="2" rx="5" ry="5"/>
+  <text x="230" y="275" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff">Element 3</text>
+  
+  <rect x="130" y="200" width="200" height="40" fill="#22c55e" stroke="#15803d" stroke-width="2" rx="5" ry="5"/>
+  <text x="230" y="225" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff">Element 4 (Top)</text>
+  
+  <!-- Top Pointer -->
+  <text x="100" y="220" font-family="Arial, sans-serif" font-size="18" text-anchor="end" fill="#f87171" font-weight="bold">top →</text>
+  
+  <!-- Stack Operations (Right Side) -->
+  <text x="600" y="100" font-family="Arial, sans-serif" font-size="22" text-anchor="middle" fill="#e0e0fa" font-weight="bold">Operations</text>
+  
+  <!-- Push Operation -->
+  <rect x="480" y="130" width="240" height="60" fill="#22c55e" opacity="0.9" rx="8" ry="8"/>
+  <text x="600" y="160" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#ffffff" font-weight="bold">push(item)</text>
+  <text x="600" y="185" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ffffff">Add item to top - O(1)</text>
+  
+  <!-- Pop Operation -->
+  <rect x="480" y="200" width="240" height="60" fill="#f87171" opacity="0.9" rx="8" ry="8"/>
+  <text x="600" y="230" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#ffffff" font-weight="bold">pop()</text>
+  <text x="600" y="255" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ffffff">Remove from top - O(1)</text>
+  
+  <!-- Peek Operation -->
+  <rect x="480" y="270" width="240" height="60" fill="#7c3aed" opacity="0.9" rx="8" ry="8"/>
+  <text x="600" y="300" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#ffffff" font-weight="bold">peek() / top()</text>
+  <text x="600" y="325" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ffffff">View top without removing - O(1)</text>
+  
+  <!-- isEmpty Operation -->
+  <rect x="480" y="340" width="240" height="60" fill="#fbbf24" opacity="0.9" rx="8" ry="8"/>
+  <text x="600" y="370" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#1e1e2e" font-weight="bold">isEmpty()</text>
+  <text x="600" y="395" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e1e2e">Check if stack is empty - O(1)</text>
+  
+  <!-- Push Arrow Animation -->
+  <path d="M 600 410 L 600 425 L 230 425 L 230 250" fill="none" stroke="#22c55e" stroke-width="3" stroke-dasharray="8,4"/>
+  <polygon points="230,190 220,215 240,215" fill="#22c55e"/>
+  <text x="350" y="420" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#22c55e" font-style="italic">push()</text>
+  
+  <!-- Pop Arrow Animation -->
+  <path d="M 230 190 L 230 160 L 550 160" fill="none" stroke="#f87171" stroke-width="3" stroke-dasharray="8,4"/>
+  <polygon points="580,160 555,150 555,170" fill="#f87171"/>
+  <text x="350" y="150" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#f87171" font-style="italic">pop()</text>
+  
+  <!-- Fun Facts Box -->
+  <rect x="160" y="440" width="480" height="40" rx="10" ry="10" fill="#fbbf24" opacity="0.3"/>
+  <text x="400" y="465" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#e0e0fa" font-weight="bold" font-style="italic">
+    Fun Fact: The call stack is why recursion can crash your program with a "stack overflow"!
+  </text>
+  
+  <!-- Stack Applications -->
+  <rect x="40" y="80" width="180" height="90" rx="10" ry="10" fill="#7c3aed" opacity="0.2"/>
+  <text x="130" y="100" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa" font-weight="bold">
+    Real-World Stack Applications:
+  </text>
+  <text x="55" y="125" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#e0e0fa">
+    • Function Call Management
+  </text>
+  <text x="55" y="145" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#e0e0fa">
+    • Browser History (Back Button)
+  </text>
+  <text x="55" y="165" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#e0e0fa">
+    • Undo/Redo Functionality
+  </text>
+  
+  <!-- Stack Joke -->
+  <rect x="580" y="80" width="200" height="50" rx="10" ry="10" fill="#fbbf24" opacity="0.2"/>
+  <text x="680" y="105" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa" font-style="italic">
+    "Why do programmers prefer stacks?"
+  </text>
+  <text x="680" y="125" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa" font-style="italic">
+    "Because the last one in is the first one out!"
+  </text>
+</svg>
