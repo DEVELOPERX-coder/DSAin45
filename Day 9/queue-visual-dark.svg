@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1e1e2e" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="45" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" font-weight="bold" fill="#e0e0fa">
+    Queue: First-In-First-Out (FIFO) Data Structure
+  </text>
+  
+  <!-- Queue Visualization (Center) -->
+  <rect x="130" y="170" width="540" height="110" fill="#252536" stroke="#4d4d69" stroke-width="2" rx="5" ry="5"/>
+  
+  <!-- Queue Elements -->
+  <rect x="150" y="180" width="100" height="90" fill="#7c3aed" stroke="#6025c0" stroke-width="2" rx="5" ry="5"/>
+  <text x="200" y="230" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff">Item 1</text>
+  
+  <rect x="270" y="180" width="100" height="90" fill="#7c3aed" stroke="#6025c0" stroke-width="2" rx="5" ry="5"/>
+  <text x="320" y="230" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff">Item 2</text>
+  
+  <rect x="390" y="180" width="100" height="90" fill="#7c3aed" stroke="#6025c0" stroke-width="2" rx="5" ry="5"/>
+  <text x="440" y="230" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff">Item 3</text>
+  
+  <rect x="510" y="180" width="100" height="90" fill="#7c3aed" stroke="#6025c0" stroke-width="2" rx="5" ry="5"/>
+  <text x="560" y="230" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff">Item 4</text>
+  
+  <!-- Front and Rear Pointers -->
+  <text x="200" y="155" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#f87171" font-weight="bold">front</text>
+  <path d="M200,158 L200,180" fill="none" stroke="#f87171" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <text x="560" y="155" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#f87171" font-weight="bold">rear</text>
+  <path d="M560,158 L560,180" fill="none" stroke="#f87171" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Direction Indicators -->
+  <text x="90" y="230" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#22c55e" font-weight="bold">Dequeue ←</text>
+  <text x="710" y="230" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#22c55e" font-weight="bold">→ Enqueue</text>
+  
+  <!-- Queue Operations (Bottom) -->
+  <text x="400" y="310" font-family="Arial, sans-serif" font-size="22" text-anchor="middle" fill="#e0e0fa" font-weight="bold">Operations</text>
+  
+  <!-- Enqueue Operation -->
+  <rect x="550" y="330" width="180" height="50" fill="#22c55e" opacity="0.9" rx="8" ry="8"/>
+  <text x="640" y="360" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#ffffff" font-weight="bold">enqueue(item)</text>
+  <text x="640" y="380" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#ffffff">Add item at rear - O(1)</text>
+  
+  <!-- Dequeue Operation -->
+  <rect x="70" y="330" width="180" height="50" fill="#f87171" opacity="0.9" rx="8" ry="8"/>
+  <text x="160" y="360" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#ffffff" font-weight="bold">dequeue()</text>
+  <text x="160" y="380" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#ffffff">Remove from front - O(1)</text>
+  
+  <!-- Front Operation -->
+  <rect x="260" y="330" width="120" height="50" fill="#7c3aed" opacity="0.9" rx="8" ry="8"/>
+  <text x="320" y="360" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#ffffff" font-weight="bold">front()</text>
+  <text x="320" y="380" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#ffffff">View front - O(1)</text>
+  
+  <!-- IsEmpty Operation -->
+  <rect x="390" y="330" width="150" height="50" fill="#fbbf24" opacity="0.9" rx="8" ry="8"/>
+  <text x="465" y="360" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#1e1e2e" font-weight="bold">isEmpty()</text>
+  <text x="465" y="380" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1e1e2e">Check if empty - O(1)</text>
+  
+  <!-- Enqueue Arrow Animation -->
+  <path d="M 650 330 L 650 300 L 620 300 L 620 270" fill="none" stroke="#22c55e" stroke-width="3" stroke-dasharray="8,4"/>
+  <polygon points="620,240 610,265 630,265" fill="#22c55e"/>
+  
+  <!-- Dequeue Arrow Animation -->
+  <path d="M 160 330 L 160 300 L 140 300 L 140 270" fill="none" stroke="#f87171" stroke-width="3" stroke-dasharray="8,4"/>
+  <polygon points="140,240 130,265 150,265" fill="#f87171"/>
+  
+  <!-- Queue Applications -->
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#e0e0fa" font-weight="bold">Real-World Applications</text>
+  
+  <rect x="100" y="420" width="150" height="40" rx="8" ry="8" fill="#7c3aed" opacity="0.5"/>
+  <text x="175" y="445" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">Process Scheduling</text>
+  
+  <rect x="260" y="420" width="150" height="40" rx="8" ry="8" fill="#7c3aed" opacity="0.5"/>
+  <text x="335" y="445" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">BFS Algorithms</text>
+  
+  <rect x="420" y="420" width="150" height="40" rx="8" ry="8" fill="#7c3aed" opacity="0.5"/>
+  <text x="495" y="445" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">Printer Spooling</text>
+  
+  <rect x="580" y="420" width="150" height="40" rx="8" ry="8" fill="#7c3aed" opacity="0.5"/>
+  <text x="655" y="445" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa">Message Brokers</text>
+  
+  <!-- Fun Facts Box -->
+  <rect x="100" y="80" width="600" height="40" rx="10" ry="10" fill="#fbbf24" opacity="0.3"/>
+  <text x="400" y="105" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#e0e0fa" font-weight="bold" font-style="italic">
+    Queue comes from British English 'queue', meaning a line of people waiting for service
+  </text>
+  
+  <!-- Queue Implementations -->
+  <rect x="560" y="80" width="200" height="80" rx="10" ry="10" fill="#7c3aed" opacity="0.2"/>
+  <text x="660" y="100" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#e0e0fa" font-weight="bold">
+    Common Implementations:
+  </text>
+  <text x="580" y="125" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#e0e0fa">
+    • Array (circular for efficiency)
+  </text>
+  <text x="580" y="145" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#e0e0fa">
+    • Linked List (for dynamic sizing)
+  </text>
+  <text x="580" y="165" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#e0e0fa">
+    • std::queue (in C++ STL)
+  </text>
+  
+  <!-- Arrow Definitions -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f87171"/>
+    </marker>
+  </defs>
+</svg>

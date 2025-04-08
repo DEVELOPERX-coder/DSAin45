@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="45" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" font-weight="bold" fill="#333">
+    Queue Operations: Time &amp; Space Complexity
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="75" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#666">
+    Performance comparison of different queue implementations #DSAin45
+  </text>
+  
+  <!-- Table Header Background -->
+  <rect x="70" y="100" width="660" height="50" rx="5" ry="5" fill="#4285f4"/>
+  
+  <!-- Table Headers -->
+  <text x="150" y="132" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff" font-weight="bold">Operation</text>
+  <text x="290" y="132" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff" font-weight="bold">Array-Based</text>
+  <text x="430" y="132" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff" font-weight="bold">Circular Array</text>
+  <text x="570" y="132" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff" font-weight="bold">Linked List</text>
+  <text x="690" y="132" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ffffff" font-weight="bold">Priority Queue</text>
+  
+  <!-- Table Rows (alternating colors) -->
+  <!-- Row 1 -->
+  <rect x="70" y="150" width="660" height="40" fill="#e8f0fe"/>
+  <text x="150" y="175" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">Enqueue</text>
+  <text x="290" y="175" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#34a853">O(1)*</text>
+  <text x="430" y="175" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#34a853">O(1)</text>
+  <text x="570" y="175" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#34a853">O(1)</text>
+  <text x="690" y="175" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fbbc05">O(log n)</text>
+  
+  <!-- Row 2 -->
+  <rect x="70" y="190" width="660" height="40" fill="#ffffff"/>
+  <text x="150" y="215" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">Dequeue</text>
+  <text x="290" y="215" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ea4335">O(n)</text>
+  <text x="430" y="215" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#34a853">O(1)</text>
+  <text x="570" y="215" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#34a853">O(1)</text>
+  <text x="690" y="215" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fbbc05">O(log n)</text>
+  
+  <!-- Row 3 -->
+  <rect x="70" y="230" width="660" height="40" fill="#e8f0fe"/>
+  <text x="150" y="255" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">Front</text>
+  <text x="290" y="255" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#34a853">O(1)</text>
+  <text x="430" y="255" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#34a853">O(1)</text>
+  <text x="570" y="255" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#34a853">O(1)</text>
+  <text x="690" y="255" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#34a853">O(1)</text>
+  
+  <!-- Row 4 -->
+  <rect x="70" y="270" width="660" height="40" fill="#ffffff"/>
+  <text x="150" y="295" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">Rear</text>
+  <text x="290" y="295" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#34a853">O(1)</text>
+  <text x="430" y="295" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#34a853">O(1)</text>
+  <text x="570" y="295" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#34a853">O(1)**</text>
+  <text x="690" y="295" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ea4335">N/A</text>
+  
+  <!-- Row 5 -->
+  <rect x="70" y="310" width="660" height="40" fill="#e8f0fe"/>
+  <text x="150" y="335" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">Search</text>
+  <text x="290" y="335" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ea4335">O(n)</text>
+  <text x="430" y="335" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ea4335">O(n)</text>
+  <text x="570" y="335" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ea4335">O(n)</text>
+  <text x="690" y="335" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ea4335">O(n)</text>
+  
+  <!-- Row 6 -->
+  <rect x="70" y="350" width="660" height="40" fill="#ffffff"/>
+  <text x="150" y="375" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">Space Complexity</text>
+  <text x="290" y="375" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ea4335">O(n)***</text>
+  <text x="430" y="375" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fbbc05">O(n)</text>
+  <text x="570" y="375" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fbbc05">O(n)</text>
+  <text x="690" y="375" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fbbc05">O(n)</text>
+  
+  <!-- Notes -->
+  <text x="70" y="410" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#666" font-style="italic">
+    * O(1) amortized, can be O(n) if resizing is needed
+  </text>
+  <text x="70" y="430" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#666" font-style="italic">
+    ** O(1) only if a tail pointer is maintained
+  </text>
+  <text x="70" y="450" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#666" font-style="italic">
+    *** Might waste space if queue size is much smaller than array capacity
+  </text>
+  <text x="70" y="470" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#666" font-style="italic">
+    n = number of elements in the queue
+  </text>
+  
+  <!-- Color Legend -->
+  <rect x="580" y="410" width="20" height="20" fill="#34a853"/>
+  <text x="605" y="425" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#333">O(1) - Constant Time (Best)</text>
+  
+  <rect x="580" y="435" width="20" height="20" fill="#fbbc05"/>
+  <text x="605" y="450" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#333">O(log n) - Logarithmic Time</text>
+  
+  <rect x="580" y="460" width="20" height="20" fill="#ea4335"/>
+  <text x="605" y="475" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#333">O(n) - Linear Time</text>
+  
+  <!-- Implementations Summary -->
+  <rect x="70" y="310" width="250" height="160" rx="8" ry="8" fill="#e8f0fe" opacity="0.5"/>
+  
+  <text x="90" y="330" font-family="Arial, sans-serif" font-size="16" text-anchor="start" fill="#333" font-weight="bold">
+    Implementation Trade-offs:
+  </text>
+  
+  <text x="90" y="355" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#333">
+    • Array-based: Simple but inefficient dequeue
+  </text>
+  
+  <text x="90" y="380" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#333">
+    • Circular array: Efficient operations, fixed size
+  </text>
+  
+  <text x="90" y="405" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#333">
+    • Linked list: Dynamic size, extra memory per node
+  </text>
+  
+  <text x="90" y="430" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#333">
+    • Priority queue: Based on heap structure
+  </text>
+  
+  <text x="90" y="455" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#333">
+    • STL std::queue: Container adapter (default: deque)
+  </text>
+  
+  <!-- Fun Fact -->
+  <rect x="100" y="80" width="600" height="25" rx="5" ry="5" fill="#fbbc05" opacity="0.4"/>
+  <text x="400" y="97" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333" font-style="italic">
+    Circular queues solve the "false overflow" problem by reusing freed space in the array!
+  </text>
+</svg>
