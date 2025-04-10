@@ -1,0 +1,243 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFFF" />
+      <stop offset="100%" stop-color="#FF00FF" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#121212" />
+  
+  <!-- Grid Pattern -->
+  <g opacity="0.1" stroke="#004444" stroke-width="1">
+    <g id="grid">
+      <line x1="0" y1="0" x2="800" y2="0" />
+      <line x1="0" y1="50" x2="800" y2="50" />
+      <line x1="0" y1="100" x2="800" y2="100" />
+      <line x1="0" y1="150" x2="800" y2="150" />
+      <line x1="0" y1="200" x2="800" y2="200" />
+      <line x1="0" y1="250" x2="800" y2="250" />
+      <line x1="0" y1="300" x2="800" y2="300" />
+      <line x1="0" y1="350" x2="800" y2="350" />
+      <line x1="0" y1="400" x2="800" y2="400" />
+      <line x1="0" y1="450" x2="800" y2="450" />
+      <line x1="0" y1="500" x2="800" y2="500" />
+      <line x1="0" y1="550" x2="800" y2="550" />
+      <line x1="0" y1="600" x2="800" y2="600" />
+      
+      <line x1="0" y1="0" x2="0" y2="600" />
+      <line x1="100" y1="0" x2="100" y2="600" />
+      <line x1="200" y1="0" x2="200" y2="600" />
+      <line x1="300" y1="0" x2="300" y2="600" />
+      <line x1="400" y1="0" x2="400" y2="600" />
+      <line x1="500" y1="0" x2="500" y2="600" />
+      <line x1="600" y1="0" x2="600" y2="600" />
+      <line x1="700" y1="0" x2="700" y2="600" />
+      <line x1="800" y1="0" x2="800" y2="600" />
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="url(#headerGradient)" text-anchor="middle" filter="url(#glow)">Hash Table Time &amp; Space Complexity</text>
+  
+  <!-- Time Complexity Table -->
+  <g transform="translate(70, 100)">
+    <text x="300" y="0" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFF00" text-anchor="middle">Time Complexity</text>
+    
+    <!-- Table Headers -->
+    <rect x="0" y="20" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="2" />
+    <text x="90" y="45" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFF00" text-anchor="middle">Operation</text>
+    
+    <rect x="180" y="20" width="150" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="2" />
+    <text x="255" y="45" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFF00" text-anchor="middle">Average Case</text>
+    
+    <rect x="330" y="20" width="150" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="2" />
+    <text x="405" y="45" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFF00" text-anchor="middle">Worst Case</text>
+    
+    <rect x="480" y="20" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="2" />
+    <text x="570" y="45" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFF00" text-anchor="middle">Notes</text>
+    
+    <!-- Insert Row -->
+    <rect x="0" y="60" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="90" y="85" font-family="Arial, sans-serif" font-size="18" fill="#00FFFF" text-anchor="middle">Insert</text>
+    
+    <rect x="180" y="60" width="150" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="255" y="85" font-family="Arial, sans-serif" font-size="18" fill="#FF00FF" text-anchor="middle">O(1)</text>
+    
+    <rect x="330" y="60" width="150" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="405" y="85" font-family="Arial, sans-serif" font-size="18" fill="#FF8800" text-anchor="middle">O(n)</text>
+    
+    <rect x="480" y="60" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="570" y="85" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Depends on hash collisions</text>
+    
+    <!-- Search Row -->
+    <rect x="0" y="100" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="90" y="125" font-family="Arial, sans-serif" font-size="18" fill="#00FFFF" text-anchor="middle">Search</text>
+    
+    <rect x="180" y="100" width="150" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="255" y="125" font-family="Arial, sans-serif" font-size="18" fill="#FF00FF" text-anchor="middle">O(1)</text>
+    
+    <rect x="330" y="100" width="150" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="405" y="125" font-family="Arial, sans-serif" font-size="18" fill="#FF8800" text-anchor="middle">O(n)</text>
+    
+    <rect x="480" y="100" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="570" y="125" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Same as insert</text>
+    
+    <!-- Delete Row -->
+    <rect x="0" y="140" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="90" y="165" font-family="Arial, sans-serif" font-size="18" fill="#00FFFF" text-anchor="middle">Delete</text>
+    
+    <rect x="180" y="140" width="150" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="255" y="165" font-family="Arial, sans-serif" font-size="18" fill="#FF00FF" text-anchor="middle">O(1)</text>
+    
+    <rect x="330" y="140" width="150" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="405" y="165" font-family="Arial, sans-serif" font-size="18" fill="#FF8800" text-anchor="middle">O(n)</text>
+    
+    <rect x="480" y="140" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="570" y="165" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Same as insert</text>
+    
+    <!-- Iterate Row -->
+    <rect x="0" y="180" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="90" y="205" font-family="Arial, sans-serif" font-size="18" fill="#00FFFF" text-anchor="middle">Iterate</text>
+    
+    <rect x="180" y="180" width="150" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="255" y="205" font-family="Arial, sans-serif" font-size="18" fill="#FF8800" text-anchor="middle">O(n)</text>
+    
+    <rect x="330" y="180" width="150" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="405" y="205" font-family="Arial, sans-serif" font-size="18" fill="#FF8800" text-anchor="middle">O(n)</text>
+    
+    <rect x="480" y="180" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="570" y="205" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Must visit all elements</text>
+  </g>
+  
+  <!-- Collision Resolution Complexity Comparison -->
+  <g transform="translate(70, 290)">
+    <text x="300" y="0" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFF00" text-anchor="middle">Collision Resolution Methods</text>
+    
+    <!-- Table Headers -->
+    <rect x="0" y="20" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="2" />
+    <text x="90" y="45" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFF00" text-anchor="middle">Method</text>
+    
+    <rect x="180" y="20" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="2" />
+    <text x="240" y="45" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFF00" text-anchor="middle">Insert</text>
+    
+    <rect x="300" y="20" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="2" />
+    <text x="360" y="45" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFF00" text-anchor="middle">Search</text>
+    
+    <rect x="420" y="20" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="2" />
+    <text x="480" y="45" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFF00" text-anchor="middle">Delete</text>
+    
+    <rect x="540" y="20" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="2" />
+    <text x="600" y="45" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFF00" text-anchor="middle">Space</text>
+    
+    <!-- Separate Chaining Row -->
+    <rect x="0" y="60" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="90" y="85" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">Separate Chaining</text>
+    
+    <rect x="180" y="60" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="240" y="85" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">O(1) avg</text>
+    
+    <rect x="300" y="60" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="360" y="85" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">O(1) avg</text>
+    
+    <rect x="420" y="60" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="480" y="85" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">O(1) avg</text>
+    
+    <rect x="540" y="60" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="600" y="85" font-family="Arial, sans-serif" font-size="16" fill="#FF8800" text-anchor="middle">O(n + m)</text>
+    
+    <!-- Linear Probing Row -->
+    <rect x="0" y="100" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="90" y="125" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">Linear Probing</text>
+    
+    <rect x="180" y="100" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="240" y="125" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">O(1) avg</text>
+    
+    <rect x="300" y="100" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="360" y="125" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">O(1) avg</text>
+    
+    <rect x="420" y="100" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="480" y="125" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">O(1) avg</text>
+    
+    <rect x="540" y="100" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="600" y="125" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">O(n)</text>
+    
+    <!-- Quadratic Probing Row -->
+    <rect x="0" y="140" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="90" y="165" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">Quadratic Probing</text>
+    
+    <rect x="180" y="140" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="240" y="165" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">O(1) avg</text>
+    
+    <rect x="300" y="140" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="360" y="165" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">O(1) avg</text>
+    
+    <rect x="420" y="140" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="480" y="165" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">O(1) avg</text>
+    
+    <rect x="540" y="140" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="600" y="165" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">O(n)</text>
+    
+    <!-- Double Hashing Row -->
+    <rect x="0" y="180" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="90" y="205" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">Double Hashing</text>
+    
+    <rect x="180" y="180" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="240" y="205" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">O(1) avg</text>
+    
+    <rect x="300" y="180" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="360" y="205" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">O(1) avg</text>
+    
+    <rect x="420" y="180" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="480" y="205" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">O(1) avg</text>
+    
+    <rect x="540" y="180" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="600" y="205" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">O(n)</text>
+    
+    <!-- Robin Hood Row -->
+    <rect x="0" y="220" width="180" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="90" y="245" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">Robin Hood</text>
+    
+    <rect x="180" y="220" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="240" y="245" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">O(1) avg</text>
+    
+    <rect x="300" y="220" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="360" y="245" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">O(log n) avg</text>
+    
+    <rect x="420" y="220" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="480" y="245" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">O(1) avg</text>
+    
+    <rect x="540" y="220" width="120" height="40" fill="#1A1A1A" stroke="#00FF00" stroke-width="1" />
+    <text x="600" y="245" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">O(n)</text>
+  </g>
+  
+  <!-- Key Performance Factors -->
+  <g transform="translate(100, 480)">
+    <text x="300" y="0" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFF00" text-anchor="middle">Key Performance Factors</text>
+    
+    <g transform="translate(0, 30)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" fill="#FF00FF" text-anchor="start">• Hash Function Quality</text>
+      <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="start">Even distribution of keys is critical for performance</text>
+    </g>
+    
+    <g transform="translate(0, 70)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" fill="#FF00FF" text-anchor="start">• Load Factor (α)</text>
+      <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="start">α = n/m (elements/table size) - Typically maintain α < 0.7</text>
+    </g>
+    
+    <g transform="translate(350, 30)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" fill="#FF00FF" text-anchor="start">• Collision Resolution Strategy</text>
+      <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="start">Different methods have different trade-offs</text>
+    </g>
+    
+    <g transform="translate(350, 70)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" fill="#FF00FF" text-anchor="start">• Rehashing Threshold</text>
+      <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="start">When to resize table affects amortized complexity</text>
+    </g>
+  </g>
+</svg>

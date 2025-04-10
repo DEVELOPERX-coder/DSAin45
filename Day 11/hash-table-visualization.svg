@@ -1,0 +1,228 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFFF" />
+      <stop offset="100%" stop-color="#FF00FF" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00FF00" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#121212" />
+  
+  <!-- Grid Pattern -->
+  <g opacity="0.1" stroke="#004444" stroke-width="1">
+    <g id="grid">
+      <!-- Horizontal lines -->
+      <line x1="0" y1="0" x2="800" y2="0" />
+      <line x1="0" y1="50" x2="800" y2="50" />
+      <line x1="0" y1="100" x2="800" y2="100" />
+      <line x1="0" y1="150" x2="800" y2="150" />
+      <line x1="0" y1="200" x2="800" y2="200" />
+      <line x1="0" y1="250" x2="800" y2="250" />
+      <line x1="0" y1="300" x2="800" y2="300" />
+      <line x1="0" y1="350" x2="800" y2="350" />
+      <line x1="0" y1="400" x2="800" y2="400" />
+      <line x1="0" y1="450" x2="800" y2="450" />
+      <line x1="0" y1="500" x2="800" y2="500" />
+      <line x1="0" y1="550" x2="800" y2="550" />
+      <line x1="0" y1="600" x2="800" y2="600" />
+      
+      <!-- Vertical lines -->
+      <line x1="0" y1="0" x2="0" y2="600" />
+      <line x1="100" y1="0" x2="100" y2="600" />
+      <line x1="200" y1="0" x2="200" y2="600" />
+      <line x1="300" y1="0" x2="300" y2="600" />
+      <line x1="400" y1="0" x2="400" y2="600" />
+      <line x1="500" y1="0" x2="500" y2="600" />
+      <line x1="600" y1="0" x2="600" y2="600" />
+      <line x1="700" y1="0" x2="700" y2="600" />
+      <line x1="800" y1="0" x2="800" y2="600" />
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="url(#headerGradient)" text-anchor="middle" filter="url(#glow)">Hash Table - Data Structure For O(1) Lookups</text>
+  
+  <!-- Hash Table Structure -->
+  <g transform="translate(150, 100)">
+    <!-- Keys -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="120" height="50" rx="5" fill="#1A1A1A" stroke="#00FFFF" stroke-width="2" />
+      <text x="60" y="30" font-family="Arial, sans-serif" font-size="20" fill="#00FFFF" text-anchor="middle">"cat"</text>
+      
+      <rect x="0" y="60" width="120" height="50" rx="5" fill="#1A1A1A" stroke="#00FFFF" stroke-width="2" />
+      <text x="60" y="90" font-family="Arial, sans-serif" font-size="20" fill="#00FFFF" text-anchor="middle">"dog"</text>
+      
+      <rect x="0" y="120" width="120" height="50" rx="5" fill="#1A1A1A" stroke="#00FFFF" stroke-width="2" />
+      <text x="60" y="150" font-family="Arial, sans-serif" font-size="20" fill="#00FFFF" text-anchor="middle">"fox"</text>
+      
+      <!-- Key Label -->
+      <text x="60" y="-20" font-family="Arial, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Keys</text>
+    </g>
+    
+    <!-- Hash Function -->
+    <g transform="translate(170, 0)">
+      <rect x="0" y="0" width="120" height="170" rx="10" fill="#1A1A1A" stroke="#FF00FF" stroke-width="2" />
+      <text x="60" y="90" font-family="Arial, sans-serif" font-size="24" fill="#FF00FF" text-anchor="middle">hash()</text>
+      <text x="60" y="115" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">h(key) % size</text>
+      
+      <!-- Hash Function Label -->
+      <text x="60" y="-20" font-family="Arial, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Hash Function</text>
+    </g>
+    
+    <!-- Array Indices -->
+    <g transform="translate(340, 0)">
+      <rect x="0" y="0" width="60" height="50" rx="5" fill="#1A1A1A" stroke="#00FF00" stroke-width="2" />
+      <text x="30" y="30" font-family="Arial, sans-serif" font-size="20" fill="#00FF00" text-anchor="middle">2</text>
+      
+      <rect x="0" y="60" width="60" height="50" rx="5" fill="#1A1A1A" stroke="#00FF00" stroke-width="2" />
+      <text x="30" y="90" font-family="Arial, sans-serif" font-size="20" fill="#00FF00" text-anchor="middle">5</text>
+      
+      <rect x="0" y="120" width="60" height="50" rx="5" fill="#1A1A1A" stroke="#00FF00" stroke-width="2" />
+      <text x="30" y="150" font-family="Arial, sans-serif" font-size="20" fill="#00FF00" text-anchor="middle">0</text>
+      
+      <!-- Indices Label -->
+      <text x="30" y="-20" font-family="Arial, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Indices</text>
+    </g>
+    
+    <!-- Hash Table Array -->
+    <g transform="translate(450, 0)">
+      <!-- Array elements -->
+      <rect x="0" y="0" width="50" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="25" y="25" font-family="Arial, sans-serif" font-size="14" fill="#FFFF00" text-anchor="middle">[0]</text>
+      
+      <rect x="0" y="40" width="50" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="25" y="65" font-family="Arial, sans-serif" font-size="14" fill="#FFFF00" text-anchor="middle">[1]</text>
+      
+      <rect x="0" y="80" width="50" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="25" y="105" font-family="Arial, sans-serif" font-size="14" fill="#FFFF00" text-anchor="middle">[2]</text>
+      
+      <rect x="0" y="120" width="50" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="25" y="145" font-family="Arial, sans-serif" font-size="14" fill="#FFFF00" text-anchor="middle">[3]</text>
+      
+      <rect x="0" y="160" width="50" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="25" y="185" font-family="Arial, sans-serif" font-size="14" fill="#FFFF00" text-anchor="middle">[4]</text>
+      
+      <rect x="0" y="200" width="50" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="25" y="225" font-family="Arial, sans-serif" font-size="14" fill="#FFFF00" text-anchor="middle">[5]</text>
+      
+      <rect x="0" y="240" width="50" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="25" y="265" font-family="Arial, sans-serif" font-size="14" fill="#FFFF00" text-anchor="middle">[6]</text>
+      
+      <rect x="0" y="280" width="50" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="25" y="305" font-family="Arial, sans-serif" font-size="14" fill="#FFFF00" text-anchor="middle">[7]</text>
+      
+      <!-- Array values -->
+      <rect x="50" y="0" width="100" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="100" y="25" font-family="Arial, sans-serif" font-size="18" fill="#FFFF00" text-anchor="middle">"????"</text>
+      
+      <rect x="50" y="40" width="100" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="100" y="65" font-family="Arial, sans-serif" font-size="18" fill="#FFFF00" text-anchor="middle"></text>
+      
+      <rect x="50" y="80" width="100" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="100" y="105" font-family="Arial, sans-serif" font-size="18" fill="#FFFF00" text-anchor="middle">"meow"</text>
+      
+      <rect x="50" y="120" width="100" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="100" y="145" font-family="Arial, sans-serif" font-size="18" fill="#FFFF00" text-anchor="middle"></text>
+      
+      <rect x="50" y="160" width="100" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="100" y="185" font-family="Arial, sans-serif" font-size="18" fill="#FFFF00" text-anchor="middle"></text>
+      
+      <rect x="50" y="200" width="100" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="100" y="225" font-family="Arial, sans-serif" font-size="18" fill="#FFFF00" text-anchor="middle">"woof"</text>
+      
+      <rect x="50" y="240" width="100" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="100" y="265" font-family="Arial, sans-serif" font-size="18" fill="#FFFF00" text-anchor="middle"></text>
+      
+      <rect x="50" y="280" width="100" height="40" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="100" y="305" font-family="Arial, sans-serif" font-size="18" fill="#FFFF00" text-anchor="middle"></text>
+      
+      <!-- Array Label -->
+      <text x="75" y="-20" font-family="Arial, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Hash Table Array</text>
+    </g>
+    
+    <!-- Connecting Arrows -->
+    <!-- Key to Hash Function -->
+    <line x1="120" y1="25" x2="170" y2="25" stroke="#00FF00" stroke-width="2" marker-end="url(#arrowhead)" />
+    <line x1="120" y1="85" x2="170" y2="85" stroke="#00FF00" stroke-width="2" marker-end="url(#arrowhead)" />
+    <line x1="120" y1="145" x2="170" y2="145" stroke="#00FF00" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- Hash Function to Indices -->
+    <line x1="290" y1="25" x2="340" y2="25" stroke="#00FF00" stroke-width="2" marker-end="url(#arrowhead)" />
+    <line x1="290" y1="85" x2="340" y2="85" stroke="#00FF00" stroke-width="2" marker-end="url(#arrowhead)" />
+    <line x1="290" y1="145" x2="340" y2="145" stroke="#00FF00" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- Indices to Array -->
+    <line x1="400" y1="25" x2="450" y2="25" stroke="#00FF00" stroke-width="2" marker-end="url(#arrowhead)" />
+    <line x1="400" y1="85" x2="450" y2="105" stroke="#00FF00" stroke-width="2" marker-end="url(#arrowhead)" />
+    <line x1="400" y1="145" x2="450" y2="25" stroke="#00FF00" stroke-width="2" marker-end="url(#arrowhead)" />
+  </g>
+  
+  <!-- Collision Resolution Section -->
+  <g transform="translate(100, 450)">
+    <text x="300" y="0" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFF00" text-anchor="middle">Collision Resolution Techniques</text>
+    
+    <!-- Separate Chaining -->
+    <g transform="translate(0, 30)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" fill="#00FFFF" text-anchor="start">1. Separate Chaining</text>
+      
+      <!-- Illustration -->
+      <rect x="10" y="10" width="40" height="30" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="30" y="30" font-family="Arial, sans-serif" font-size="14" fill="#FFFF00" text-anchor="middle">[2]</text>
+      
+      <rect x="50" y="10" width="80" height="30" fill="#1A1A1A" stroke="#00FFFF" stroke-width="2" />
+      <text x="90" y="30" font-family="Arial, sans-serif" font-size="14" fill="#00FFFF" text-anchor="middle">"cat":"meow"</text>
+      
+      <line x1="130" y1="25" x2="150" y2="25" stroke="#00FF00" stroke-width="2" />
+      <polygon points="150,25 145,20 145,30" fill="#00FF00" />
+      
+      <rect x="150" y="10" width="80" height="30" fill="#1A1A1A" stroke="#00FFFF" stroke-width="2" />
+      <text x="190" y="30" font-family="Arial, sans-serif" font-size="14" fill="#00FFFF" text-anchor="middle">"rat":"squeak"</text>
+    </g>
+    
+    <!-- Linear Probing -->
+    <g transform="translate(300, 30)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" fill="#00FFFF" text-anchor="start">2. Linear Probing</text>
+      
+      <!-- Illustration -->
+      <rect x="10" y="10" width="40" height="30" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="30" y="30" font-family="Arial, sans-serif" font-size="14" fill="#FFFF00" text-anchor="middle">[2]</text>
+      
+      <rect x="50" y="10" width="80" height="30" fill="#1A1A1A" stroke="#00FFFF" stroke-width="2" />
+      <text x="90" y="30" font-family="Arial, sans-serif" font-size="14" fill="#00FFFF" text-anchor="middle">"cat":"meow"</text>
+      
+      <rect x="10" y="45" width="40" height="30" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="30" y="65" font-family="Arial, sans-serif" font-size="14" fill="#FFFF00" text-anchor="middle">[3]</text>
+      
+      <rect x="50" y="45" width="80" height="30" fill="#1A1A1A" stroke="#00FFFF" stroke-width="2" />
+      <text x="90" y="65" font-family="Arial, sans-serif" font-size="14" fill="#00FFFF" text-anchor="middle">"rat":"squeak"</text>
+      
+      <path d="M30,35 L30,40 Q30,45 35,45 L140,45" stroke="#FF00FF" stroke-width="2" fill="none" />
+      <polygon points="140,45 135,40 135,50" fill="#FF00FF" />
+      <text x="85" y="40" font-family="Arial, sans-serif" font-size="12" fill="#FF00FF" text-anchor="middle">Collision→Next Slot</text>
+    </g>
+  </g>
+  
+  <!-- Key Operations -->
+  <g transform="translate(100, 360)">
+    <text x="300" y="0" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFF00" text-anchor="middle">Key Operations</text>
+    
+    <g transform="translate(50, 30)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" fill="#00FFFF" text-anchor="start">• Insert: O(1) average</text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="18" fill="#00FFFF" text-anchor="start">• Search: O(1) average</text>
+      <text x="0" y="50" font-family="Arial, sans-serif" font-size="18" fill="#00FFFF" text-anchor="start">• Delete: O(1) average</text>
+    </g>
+    
+    <g transform="translate(350, 30)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" fill="#FF8800" text-anchor="start">• Worst case: O(n) all operations</text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="18" fill="#FF8800" text-anchor="start">• Space complexity: O(n)</text>
+    </g>
+  </g>
+</svg>

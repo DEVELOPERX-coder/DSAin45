@@ -1,0 +1,111 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFFF" />
+      <stop offset="100%" stop-color="#FF00FF" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#121212" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#headerGradient)" text-anchor="middle" filter="url(#glow)">When Two Different Keys Hash to the Same Index</text>
+  
+  <!-- The Office Identity Theft Meme Format -->
+  <g transform="translate(50, 80)">
+    <!-- First Panel -->
+    <rect x="0" y="0" width="700" height="230" rx="10" fill="#1A1A1A" stroke="#00FF00" stroke-width="3" />
+    
+    <!-- Dwight Image Placeholder -->
+    <image x="20" y="20" width="190" height="190" href="/api/placeholder/190/190" />
+    
+    <!-- Dialog -->
+    <rect x="230" y="20" width="450" height="190" rx="20" fill="#222222" stroke="#00FFFF" stroke-width="2" />
+    <text x="455" y="70" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFF00" text-anchor="middle">IDENTITY THEFT IS NOT A JOKE, JIM!</text>
+    <text x="455" y="120" font-family="Arial, sans-serif" font-size="22" fill="#FF00FF" text-anchor="middle">MILLIONS OF HASH COLLISIONS</text>
+    <text x="455" y="160" font-family="Arial, sans-serif" font-size="22" fill="#FF00FF" text-anchor="middle">SUFFER EVERY YEAR!</text>
+  </g>
+  
+  <!-- Second Panel -->
+  <g transform="translate(50, 330)">
+    <!-- Hash Table Visualization -->
+    <rect x="0" y="0" width="700" height="230" rx="10" fill="#1A1A1A" stroke="#00FF00" stroke-width="3" />
+    
+    <!-- Hash Table Indices -->
+    <text x="40" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFF00" text-anchor="start">Hash Table:</text>
+    
+    <rect x="50" y="50" width="40" height="40" fill="#222222" stroke="#00FFFF" stroke-width="2" />
+    <text x="70" y="75" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">[0]</text>
+    
+    <rect x="50" y="90" width="40" height="40" fill="#222222" stroke="#00FFFF" stroke-width="2" />
+    <text x="70" y="115" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">[1]</text>
+    
+    <rect x="50" y="130" width="40" height="40" fill="#222222" stroke="#FF00FF" stroke-width="3" />
+    <text x="70" y="155" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">[2]</text>
+    
+    <rect x="50" y="170" width="40" height="40" fill="#222222" stroke="#00FFFF" stroke-width="2" />
+    <text x="70" y="195" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">[3]</text>
+    
+    <!-- Hash Values -->
+    <rect x="90" y="50" width="150" height="40" fill="#222222" stroke="#00FFFF" stroke-width="2" />
+    <text x="165" y="75" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle"></text>
+    
+    <rect x="90" y="90" width="150" height="40" fill="#222222" stroke="#00FFFF" stroke-width="2" />
+    <text x="165" y="115" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle"></text>
+    
+    <rect x="90" y="130" width="150" height="40" fill="#222222" stroke="#FF00FF" stroke-width="3" />
+    <text x="165" y="155" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">Collision!</text>
+    
+    <rect x="90" y="170" width="150" height="40" fill="#222222" stroke="#00FFFF" stroke-width="2" />
+    <text x="165" y="195" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle"></text>
+    
+    <!-- Key Visualization - Two different keys hashing to same index -->
+    <g transform="translate(300, 80)">
+      <!-- Key 1 -->
+      <rect x="0" y="0" width="100" height="40" rx="5" fill="#1A1A1A" stroke="#00FFFF" stroke-width="2" />
+      <text x="50" y="25" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">"bears"</text>
+      
+      <!-- Hash Function for Key 1 -->
+      <text x="120" y="25" font-family="Arial, sans-serif" font-size="20" fill="#FFFFFF" text-anchor="middle">→</text>
+      <rect x="140" y="0" width="100" height="40" rx="5" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="190" y="25" font-family="Arial, sans-serif" font-size="16" fill="#FFFF00" text-anchor="middle">hash()</text>
+      
+      <!-- Result for Key 1 -->
+      <text x="260" y="25" font-family="Arial, sans-serif" font-size="20" fill="#FFFFFF" text-anchor="middle">→</text>
+      <rect x="280" y="0" width="40" height="40" rx="5" fill="#1A1A1A" stroke="#FF00FF" stroke-width="2" />
+      <text x="300" y="25" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">2</text>
+      
+      <!-- Key 2 -->
+      <rect x="0" y="70" width="100" height="40" rx="5" fill="#1A1A1A" stroke="#00FFFF" stroke-width="2" />
+      <text x="50" y="95" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">"beets"</text>
+      
+      <!-- Hash Function for Key 2 -->
+      <text x="120" y="95" font-family="Arial, sans-serif" font-size="20" fill="#FFFFFF" text-anchor="middle">→</text>
+      <rect x="140" y="70" width="100" height="40" rx="5" fill="#1A1A1A" stroke="#FFFF00" stroke-width="2" />
+      <text x="190" y="95" font-family="Arial, sans-serif" font-size="16" fill="#FFFF00" text-anchor="middle">hash()</text>
+      
+      <!-- Result for Key 2 -->
+      <text x="260" y="95" font-family="Arial, sans-serif" font-size="20" fill="#FFFFFF" text-anchor="middle">→</text>
+      <rect x="280" y="70" width="40" height="40" rx="5" fill="#1A1A1A" stroke="#FF00FF" stroke-width="2" />
+      <text x="300" y="95" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">2</text>
+    </g>
+    
+    <!-- Arrows pointing to collision bucket -->
+    <path d="M600,100 L600,150 L240,150" stroke="#FF00FF" stroke-width="2" fill="none" />
+    <polygon points="240,150 250,145 250,155" fill="#FF00FF" />
+    
+    <path d="M600,170 L600,150" stroke="#FF00FF" stroke-width="2" fill="none" />
+    <polygon points="600,150 595,160 605,160" fill="#FF00FF" />
+  </g>
+  
+  <!-- Caption -->
+  <text x="400" y="570" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFF00" text-anchor="middle">Collision Resolution: The Office Hours of Data Structures</text>
+  
+  <!-- Footer -->
+  <text x="400" y="595" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">#DSAin45 #Day11 #HashTables #ProgrammingHumor</text>
+</svg>
