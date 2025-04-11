@@ -1,0 +1,93 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFFF" />
+      <stop offset="100%" stop-color="#FF00FF" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#121212" />
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="url(#headerGradient)" text-anchor="middle" filter="url(#glow)">Advanced Hash Tables Be Like</text>
+  
+  <!-- Panel 1: LRU Cache -->
+  <g transform="translate(50, 100)">
+    <rect x="0" y="0" width="700" height="200" rx="10" fill="#1A1A1A" stroke="#00FF00" stroke-width="3" />
+    
+    <text x="350" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFF00" text-anchor="middle">LRU Cache</text>
+    
+    <!-- Person at front of line -->
+    <circle cx="150" cy="120" r="40" fill="#222222" stroke="#00FFFF" stroke-width="2" />
+    <text x="150" y="120" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">Last</text>
+    <text x="150" y="140" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">Used</text>
+    
+    <!-- Arrow pointing at person -->
+    <path d="M150,50 L150,70" stroke="#FF8800" stroke-width="2" fill="none" />
+    <polygon points="150,70 145,60 155,60" fill="#FF8800" />
+    <text x="150" y="40" font-family="Arial, sans-serif" font-size="16" fill="#FF8800" text-anchor="middle">About to get evicted</text>
+    
+    <!-- New person trying to enter -->
+    <circle cx="550" cy="120" r="40" fill="#222222" stroke="#FF00FF" stroke-width="2" />
+    <text x="550" y="120" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">New</text>
+    <text x="550" y="140" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">Item</text>
+    
+    <!-- Arrow pointing right -->
+    <path d="M240,120 L460,120" stroke="#FFFFFF" stroke-width="2" fill="none" />
+    <polygon points="460,120 450,115 450,125" fill="#FFFFFF" />
+    <text x="350" y="110" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Capacity = 5</text>
+    
+    <!-- Speech Bubble from New Person -->
+    <path d="M520,70 Q520,50 540,50 L650,50 Q670,50 670,70 L670,90 Q670,110 650,110 L560,110 L550,130 L540,110 L540,110 Q520,110 520,90 Z" fill="#1E1E1E" stroke="#FF00FF" stroke-width="2" />
+    <text x="595" y="70" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Sorry buddy, I need</text>
+    <text x="595" y="90" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">to come in!</text>
+    
+    <!-- Label at bottom -->
+    <text x="350" y="180" font-family="Arial, sans-serif" font-size="18" fill="#FFFF00" text-anchor="middle">When the cache is full, the Least Recently Used item gets evicted</text>
+  </g>
+  
+  <!-- Panel 2: LFU Cache -->
+  <g transform="translate(50, 320)">
+    <rect x="0" y="0" width="700" height="200" rx="10" fill="#1A1A1A" stroke="#00FF00" stroke-width="3" />
+    
+    <text x="350" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFF00" text-anchor="middle">LFU Cache</text>
+    
+    <!-- Person being kicked out -->
+    <circle cx="150" cy="120" r="40" fill="#222222" stroke="#FF8800" stroke-width="2" />
+    <text x="150" y="110" font-family="Arial, sans-serif" font-size="16" fill="#FF8800" text-anchor="middle">Least</text>
+    <text x="150" y="130" font-family="Arial, sans-serif" font-size="16" fill="#FF8800" text-anchor="middle">Frequent</text>
+    <text x="150" y="150" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Visits: 1</text>
+    
+    <!-- Arrow pointing at least frequent -->
+    <path d="M150,50 L150,70" stroke="#FF8800" stroke-width="2" fill="none" />
+    <polygon points="150,70 145,60 155,60" fill="#FF8800" />
+    <text x="150" y="40" font-family="Arial, sans-serif" font-size="16" fill="#FF8800" text-anchor="middle">Unpopular = Evicted</text>
+    
+    <!-- VIP person -->
+    <circle cx="350" cy="120" r="40" fill="#222222" stroke="#00FFFF" stroke-width="3" />
+    <text x="350" y="120" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">Regular</text>
+    <text x="350" y="150" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Visits: 10</text>
+    
+    <!-- New person trying to enter -->
+    <circle cx="550" cy="120" r="40" fill="#222222" stroke="#FF00FF" stroke-width="2" />
+    <text x="550" y="120" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">New</text>
+    <text x="550" y="140" font-family="Arial, sans-serif" font-size="16" fill="#FF00FF" text-anchor="middle">Item</text>
+    
+    <!-- Speech Bubble from Regular Person -->
+    <path d="M320,70 Q320,50 340,50 L450,50 Q470,50 470,70 L470,90 Q470,110 450,110 L360,110 L350,130 L340,110 L340,110 Q320,110 320,90 Z" fill="#1E1E1E" stroke="#00FFFF" stroke-width="2" />
+    <text x="395" y="70" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">I'm safe! Everyone</text>
+    <text x="395" y="90" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">knows me here!</text>
+    
+    <!-- Label at bottom -->
+    <text x="350" y="180" font-family="Arial, sans-serif" font-size="18" fill="#FFFF00" text-anchor="middle">When the cache is full, the Least Frequently Used item gets evicted</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="20" fill="#FFFFFF" text-anchor="middle">"It's not what you know, it's who you know."</text>
+  <text x="400" y="580" font-family="Arial, sans-serif" font-size="16" fill="#00FFFF" text-anchor="middle">#DSAin45 #Day12 #HashTables #CachingMemes</text>
+</svg>
